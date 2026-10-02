@@ -20,6 +20,12 @@ A fast, dependency-free static site (plain HTML, CSS and a little JavaScript). N
 
 The header and footer are repeated in each HTML file, so a change to the menu or footer needs the same edit in all eight pages.
 
+## Hosting (GitHub Pages)
+
+`.github/workflows/pages.yml` publishes the site on every push to the default branch (and can be run by hand from the Actions tab). It copies only the HTML, `favicon.ico`, `css/`, `js/` and `images/` into the published site.
+
+One-time setup: in the repository go to **Settings → Pages** and set **Source** to **GitHub Actions**. The site is then served at `https://binaryinference.github.io/Cancerawareness_site/`. All links in the pages are relative, so it works under that sub-path. When a custom domain is ready, add it under Settings → Pages and update the canonical/`og:` tags.
+
 ## Forms
 
 A static site has no server to receive form submissions, so the request and contact forms compose a message and open WhatsApp to the organisation's number (082 812 7151). The number is also shown beside each form as a call button.
